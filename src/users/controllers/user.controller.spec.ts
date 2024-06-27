@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../../app.module';
 
+
 describe('UserController (e2e)', () => {
   let app: INestApplication;
 
@@ -17,9 +18,9 @@ describe('UserController (e2e)', () => {
 
   it('/POST user - success', async () => {
     const createUserDto = {
-      name: 'John',
-      surname: 'Cf',
-      username: 'johncf',
+      name: 'mt',
+      surname: 'sd',
+      username: 'sd',
       birthDate: '2001-01-01T00:00:00.000Z',
     };
 
