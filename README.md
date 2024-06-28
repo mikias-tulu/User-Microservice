@@ -1,51 +1,85 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# User Microservice
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+User Microservice is built with NestJS framework, designed to manage user data. It provides comprehensive functionalities for user management, including CRUD operations, user blocking/unblocking, and user search capabilities. MongoDB is used for storing user data, while Redis is employed for caching to enhance performance.
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Features
+
+| Feature                   | Description                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| **User Management**       | Perform CRUD operations on users (Create, Read, Update, Delete).             |
+| **Block/Unblock User**    | Block or unblock users to manage access and interactions.                    |
+| **Search Users**          | Search for users based on specified criteria such as age and username.       |
+| **Caching**               | Utilize Redis caching to optimize performance by storing and retrieving user data efficiently. |
+
+## Technologies Used
+
+Here are the major technologies used in the user microservice:
+- **NestJS**: Backend framework
+- **MongoDB**: Database for storing user data
+- **Redis**: Used for caching
+- **TypeScript**: Programming language for development
+- **Joi**: Schema validation library for Node.js
+- **Jest**: Testing framework for unit and integration tests
+
 
 ## Installation
 
-```bash
-$ npm install
-```
+### Prerequisites
 
-## Running the app
+Before starting, ensure you have the following installed:
+
+- Node.js
+- MongoDB (installed and running or mongodb atlas)
+- Redis (installed and running or hosted link)
+- npm or yarn package manager
+
+### setup environment variables
+Set up the environment variables: Change a .env.example to .env and Change the following environment variables to your data:
+
+- MONGODB_URI=mongodb_uri
+- REDIS_HOST=redis_host
+- REDIS_PORT=redis_port
+- REDIS_PASSWORD=redis_password
+
+## Installation Steps
+
+1. Clone the repository from GitHub:
+
+   ```bash
+   git clone https://github.com/mikias-tulu/User-Microservice.git
+   ```
+2. Go to the directory
+  ```bash
+  cd user-microservice
+   ```
+3. Install dependencies
+   ```bash
+    npm install
+    ```
+4. Start the application:
+   ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ npm start
 
 # watch mode
-$ npm run start:dev
+$ npm start:dev
 
 # production mode
-$ npm run start:prod
+$ npm start:prod
 ```
 
-## Test
+## Documentation
+
+Access the complete set of API endpoints via our Postman collection:
+> **Click here 👉[Explore API Endpoints](https://www.postman.com/galactic-trinity-3206/workspace/projects/request/26061714-41810009-3d8e-4e87-bf11-f0cee4a40829)**
+
+## Running Tests
+
+To run tests, run the following command
 
 ```bash
 # unit tests
@@ -58,16 +92,3 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
